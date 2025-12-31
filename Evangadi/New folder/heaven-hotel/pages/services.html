@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Heaven Hotel</title>
+    <link rel="stylesheet" href="../css/services.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>Heaven</h1>
+                <span>Hotel</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="services.html" class="nav-link active">Services</a></li>
+                <li><a href="food-drinks.html" class="nav-link">Food & Drinks</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="signin.html" class="nav-link signin-btn">Sign In</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Our Luxury Rooms & Suites</h1>
+            <p>Discover your perfect retreat with our exceptional accommodations</p>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="filter-controls">
+                <button class="filter-btn active" data-filter="all">All Rooms</button>
+                <button class="filter-btn" data-filter="deluxe">Deluxe</button>
+                <button class="filter-btn" data-filter="suite">Suites</button>
+                <button class="filter-btn" data-filter="penthouse">Penthouse</button>
+            </div>
+            <div class="sort-controls">
+                <select id="sort-price">
+                    <option value="low">Price: Low to High</option>
+                    <option value="high">Price: High to Low</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rooms Grid -->
+    <section class="rooms-section">
+        <div class="container">
+            <div class="rooms-grid" id="rooms-grid">
+                <!-- Rooms will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Modal -->
+    <div id="booking-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Book Your Stay</h2>
+            <form id="booking-form">
+                <div class="form-group">
+                    <label>Selected Room:</label>
+                    <span id="selected-room-name"></span>
+                </div>
+                <div class="form-group">
+                    <label>Price per night:</label>
+                    <span id="selected-room-price"></span>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="check-in">Check-in Date:</label>
+                        <input type="date" id="check-in" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="check-out">Check-out Date:</label>
+                        <input type="date" id="check-out" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="guests">Number of Guests:</label>
+                    <select id="guests" required>
+                        <option value="1">1 Guest</option>
+                        <option value="2">2 Guests</option>
+                        <option value="3">3 Guests</option>
+                        <option value="4">4 Guests</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="total-price">Total Price:</label>
+                    <span id="total-price">$0</span>
+                </div>
+                <button type="submit" class="book-now-btn">Proceed to Payment</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="../js/services.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+.main-footer {
+    background-color: #222;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-nav a {
+    color: #ffcc00;
+    text-decoration: none;
+    margin: 0 8px;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}
